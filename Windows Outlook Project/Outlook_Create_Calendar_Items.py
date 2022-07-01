@@ -12,7 +12,13 @@ calendarItems.includeRecurrences = True
 #for k in calendar.Items:
 	#print(k.Subject + '\t' + 'k')
 
-itemList = [item for item in calendar.Items]	# putting all items from calendar into a list - an array of items, with the size len(calendar.Items)
+begin = dt.datetime(2022,7,2)
+end = dt.datetime(2022,7,3)
 
-# Test print to see if calendar events were placed into the itemlist
-print(itemList[0].Subject)
+# Creates new Calendar Item
+# ISSUE: Time set to UTC+0
+newItem = calendarItems.Add(1)
+newItem.Subject = 'test'
+newItem.Start = begin
+newItem.End = end
+newItem.Save()
