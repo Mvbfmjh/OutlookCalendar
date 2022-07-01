@@ -30,4 +30,3 @@ df = pd.DataFrame({'subject': event_Subject,
 #print(df.to_string())
 # When writing into Excel, needs 'total_seconds'
 df.to_excel('test.xlsx')
-#wshShell.Run(outlook)
